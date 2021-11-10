@@ -87,9 +87,9 @@ namespace Doublsb.Dialog
             _textingRoutine = StartCoroutine(Activate());
         }
 
-        public void Show(List<DialogData> Data)
+        public IEnumerator Show(List<DialogData> Data)
         {
-            StartCoroutine(Activate_List(Data));
+            yield return StartCoroutine(Activate_List(Data));
         }
 
         public void Click_Window()
